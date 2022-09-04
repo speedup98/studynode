@@ -11,7 +11,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "node bin/www.js"
+    "start": "nodemon bin/www.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
