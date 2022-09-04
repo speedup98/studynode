@@ -16,11 +16,11 @@ const express = require('express')
 const app = express();
 
 //라우팅 세팅, 컨트롤러 포함한다.
-const home = require("./routes/home"); //routes/home에서 index.js를 include한다. 그러면 index.js에서는 컨트롤러인 home.ctrl.js를 include를 하는데 여기서 각 views/home/... 으로 라우팅 처리를 한다.
+const home = require("./src/routes/home"); //routes/home에서 index.js를 include한다. 그러면 index.js에서는 컨트롤러인 home.ctrl.js를 include를 하는데 여기서 각 views/home/... 으로 라우팅 처리를 한다.
 app.use("/", home);//use는 미들웨어를 등록해주는 메서드. home.ctrl.js에서 export한
 
 //앱 세팅 - view관련 설정
-app.set("views", "./views") //views폴더 지정
+app.set("views", "./src/views") //views폴더 지정
 app.set("view engine", "ejs") //views에서 사용할 엔진으로 ejs 설정. 확장자가 ejs가 된다.
 
 module.exports = app; // bin/www.js에서 app을 받아서 서버 구동시 사용한다.
